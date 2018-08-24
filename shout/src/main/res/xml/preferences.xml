@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:shout="http://schemas.android.com/apk/res/org.whispercomm.shout" >
+
+    <org.whispercomm.shout.ui.preference.ShoutPreferenceCategory android:title="Identity Settings" >
+        <org.whispercomm.shout.ui.preference.ShoutUsernamePreference
+            android:name="Username Custom Preference"
+            android:defaultValue="@string/defaultUsername"
+            android:key="usernamePref"
+            android:maxLines="1"
+            android:selectAllOnFocus="true"
+            android:singleLine="true"
+            android:summary="@string/prefsummary_Username"
+            android:title="Username" />
+
+        <org.whispercomm.shout.ui.preference.ShoutAvatarPreference
+            android:defaultValue="@drawable/defaultavatar"
+            android:dialogTitle="@string/delegatepreftitle_Avatar"
+            android:key="avatarPref"
+            android:summary="@string/prefsummary_Avatar"
+            android:title="@string/preftitle_Avatar"
+            shout:cancelText="@string/delegateprefcancel_Avatar"
+            shout:compressionFormat="PNG"
+            shout:compressionQuality="100"
+            shout:maxCompressedSize="20480"
+            shout:maxScaledHeight="73"
+            shout:maxScaledWidth="73" />
+    </org.whispercomm.shout.ui.preference.ShoutPreferenceCategory>
+
+    <PreferenceCategory android:title="Background Service" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="runInBackground"
+            android:summary="If checked, Shout will run in the background listening for new shouts."
+            android:title="Run in Background" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Location Settings" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="attachLocation"
+            android:summary="If checked, your current location will be included with your shouts and reshouts."
+            android:title="Include Location" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="Notification Settings" >
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="show_notifications"
+            android:title="Enable Notifications"
+            android:summary="If checked, you will receive a notification when you get a Shout" />
+        <CheckBoxPreference
+            android:defaultValue="false"
+            android:key="notification_sound"
+            android:title="Notification Sound"
+            android:summary="If checked, the default notification ringtone will be played when a notification is received" />
+        <CheckBoxPreference
+            android:defaultValue="true"
+            android:key="notification_led"
+            android:title="Blink LED"
+            android:summary="If checked, the LED (if present) will blink when there are unread notifications" />
+    </PreferenceCategory>
+
+</PreferenceScreen>

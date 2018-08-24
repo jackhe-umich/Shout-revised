@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Replace placeholder ID with your tracking ID -->
+    <string name="ga_trackingId">UA-XXXX-Y</string>
+
+    <!-- Change to false on your production release branch -->
+    <bool name="ga_debug">true</bool>
+
+</resources>

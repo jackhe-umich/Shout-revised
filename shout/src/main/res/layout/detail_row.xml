@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+    <TextView
+        android:id="@+id/rowTitle"
+        android:paddingRight="5dip"
+        android:text="Table Row Title"
+        android:textStyle="bold"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:id="@+id/rowEntry"
+        android:layout_width="match_parent"
+        android:ellipsize="middle"
+        android:lines="1"
+        android:paddingRight="5dip"
+        android:text="Table Entry"
+        android:textColor="@color/gray"
+        tools:ignore="HardcodedText" />
+
+</merge>

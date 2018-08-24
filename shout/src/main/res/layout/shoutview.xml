@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android" >
+
+    <ImageView
+        android:id="@+id/avatar"
+        android:layout_width="72dp"
+        android:layout_height="72dip"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginRight="5dp"
+        android:contentDescription="@string/avatarDesc"
+        android:scaleType="centerCrop" />
+
+    <!--
+    The following layout uses nested weights. If someone can figure out a way
+    to get the desired effect without nested weights, please change it.
+    The effect is to have a layout for the sender name and reshouter count
+    that renders in the following fashion, for various lengths of usernames:
+    
+    |ShouterName                          |   // No reshouters
+    |ShouterName and 1 reshouter          |
+    |LongerShouterName and 5 reshouters   |
+    |ReallySuperLongSh... and 4 reshouters|   // Ellipsized by TextView
+    |ReallySuperLongShouterName           |   // No reshouters
+    -->
+
+    <LinearLayout
+        android:id="@+id/toprow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/avatar"
+        android:layout_marginLeft="5dp"
+        android:layout_toRightOf="@id/avatar" >
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0" >
+
+            <TextView
+                android:id="@+id/sender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textColor="@android:color/black"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/reshoutCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="left"
+                android:layout_weight="0"
+                android:singleLine="true"
+                android:textColor="@color/gray" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_weight="1" >
+        </View>
+    </LinearLayout>
+
+    <org.whispercomm.shout.ui.widget.ToggleTextView
+        android:id="@+id/message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/toprow"
+        android:layout_below="@id/toprow"
+        android:layout_marginBottom="6dp"
+        android:layout_marginTop="6dp"
+        android:textColor="@android:color/black" />
+
+    <TextView
+        android:id="@+id/commentCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@id/toprow"
+        android:layout_below="@id/message"
+        android:singleLine="true"
+        android:textColor="@color/gray" />
+
+    <TextView
+        android:id="@+id/age"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/message"
+        android:textColor="@color/gray" />
+
+</merge>

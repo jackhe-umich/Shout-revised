@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/messageviewgradient"
+    android:orientation="vertical" >
+    
+   <RelativeLayout
+           android:id="@+id/frmParent"
+           android:layout_width="fill_parent"
+           android:layout_height="wrap_content"
+           android:layout_weight="0"
+           android:gravity="center_vertical"
+           android:background="@android:color/white"
+           android:padding="10dp"
+           android:visibility="gone">
+               
+	   <ImageView
+	       android:id="@+id/commentAvatar"
+	       android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:layout_marginRight="10dp"
+	       android:contentDescription="@string/avatarDesc" />
+	
+	   <TextView
+	       android:id="@+id/commentOrigsender"
+	       android:layout_width="wrap_content"
+	       android:layout_height="wrap_content"
+	       android:layout_toRightOf="@+id/commentAvatar"
+	       android:text="OriginalSender"
+	       android:textColor="@android:color/black"
+	       android:textStyle="bold" />
+	
+	    <TextView
+	        android:id="@+id/commentMessage"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_below="@+id/commentOrigsender"
+	        android:layout_toRightOf="@+id/commentAvatar"
+	        android:layout_marginTop="5dip"
+			android:gravity="left"
+	        android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque quis purus id dolor laoreet tristique. Vivamus lacus felis, pulvinar nec vestibulum ut, rutrum nec felis. Fusce ac sapien quis est viverra iaculis at ac enim. Cras dictum mi id arcu tincidunt varius. Proin id lacus tortor, sed dictum elit. Nam."
+	        android:textColor="@android:color/black" />
+       
+   </RelativeLayout>
+           
+
+   <FrameLayout
+        android:id="@+id/frmCompose"
+        android:layout_width="match_parent"
+        android:layout_height="1dip"
+        android:layout_weight="1"
+        android:gravity="top" >
+
+        <EditText
+            android:id="@+id/compose"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:ems="10"
+            android:gravity="top|left"
+            android:inputType="textMultiLine" />
+
+        <FrameLayout
+            android:id="@+id/frmProgressBar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/progress_bar_background"
+            android:visibility="gone" >
+
+            <ProgressBar
+                android:id="@+id/progress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical|center_horizontal"
+                android:indeterminate="true"
+                android:indeterminateOnly="true" >
+            </ProgressBar>
+        </FrameLayout>
+
+
+    </FrameLayout>
+</LinearLayout>
