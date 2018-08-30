@@ -47,22 +47,6 @@ dependencies {
     implementation 'com.madgag.spongycastle:pg:+'
     implementation 'com.viewpagerindicator:library:2.4.1@aar'
     implementation group: 'commons-io', name: 'commons-io', version: '2.6'
-    //implementation(name: 'maclib-69365a2', ext:'aar')
-    //implementation files('libs/sc-light-jdk15on-1.47.0.3-SNAPSHOT.jar')
-    //implementation 'com.google.android.gms:play-services-analytics:+'
-
-
-    /*implementation 'com.actionbarAppCompat:actionbarAppCompat:4.4.0@aar'
-
-    implementation
-
-
-
-
-    implementation files('libs/commons-io-2.4.1-drbild.jar')
-    implementation files('libs/libGoogleAnalyticsV2.jar')
-
-
-    */
+    implementation(name: 'maclib-69365a2', ext:'aar')
 }
 
