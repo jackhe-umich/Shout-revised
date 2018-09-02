@@ -47,6 +47,7 @@ dependencies {
     implementation 'com.madgag.spongycastle:pg:+'
     implementation 'com.viewpagerindicator:library:2.4.1@aar'
     implementation group: 'commons-io', name: 'commons-io', version: '2.6'
-    implementation(name: 'maclib-69365a2', ext:'aar')
+    implementation project(':manesClientMaclib')
+    //implementation(name: 'maclib-69365a2', ext:'aar')
 }
 
