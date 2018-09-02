@@ -71,6 +71,7 @@ public class SettingsActivity extends PreferenceActivity {
 					}
 				});
 
+		if (getActionBar() != null)
 		getActionBar().setDisplayHomeAsUpEnabled(true);
 	}
 
